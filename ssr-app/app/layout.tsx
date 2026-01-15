@@ -1,6 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
 
+import { Footer } from '@/widgets/footer/ui/footer';
+import { Header } from '@/widgets/header/ui/header';
+
 import './globals.css';
 
 import { Providers } from '@/app/providers';
@@ -17,9 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={' antialiased'}>
-        {' '}
-        <Providers>{children}</Providers>
+      <body className={'antialiased'}>
+        <Providers>
+          <Header />
+          <main className={'flex-1 container mx-auto px-5'}>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

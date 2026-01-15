@@ -69,11 +69,12 @@ export default tseslint.config(
       '@stylistic/padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: '*', next: 'return' },
+        { blankLine: 'any', prev: 'export', next: 'export' },
         { blankLine: 'always', prev: '*', next: ['if', 'try', 'switch', 'for', 'while', 'do'] },
         { blankLine: 'always', prev: ['if', 'try', 'switch', 'for', 'while', 'do'], next: '*' },
         { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
         { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
-        { blankLine: 'always', prev: '*', next: 'export' },
+        { blankLine: 'always', prev: ['const', 'let', 'var', 'expression'], next: 'export' },
       ],
 
       'simple-import-sort/imports': [
