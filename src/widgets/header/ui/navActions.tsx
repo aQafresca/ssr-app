@@ -1,3 +1,4 @@
+import { Badge } from '@/shared/ui/badge';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -8,7 +9,6 @@ import {
 import type { INavLinkSelectProps } from '@/widgets/header/model';
 import { shopActionsLinks } from '@/widgets/header/model';
 import { NavElement } from '@/widgets/header/ui/navElement';
-import { Badge } from '@/shared/ui/badge';
 
 interface NavActionsProps extends INavLinkSelectProps {
   counts?: Record<string, number>;
