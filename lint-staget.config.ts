@@ -1,0 +1,9 @@
+/**
+ * @filename: lint-staged.config.js
+ * @type {import('lint-staged').Configuration}
+ */
+export default {
+  '*.{js,jsx,ts,tsx}': ['eslint --fix', 'prettier --write'],
+  '*.{css,html}': ['prettier --write'],
+  '*.{json,md}': ['prettier --write'],
+};
